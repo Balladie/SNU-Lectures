@@ -1,4 +1,4 @@
-#HW4 Closest 2D points
+# HW4 Closest 2D points
 
 
 2D point의 배열을 받아 가장 가까운 두 점의 거리를 반환하는 알고리즘을 구현하는 과제입니다.
