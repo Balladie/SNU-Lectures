@@ -51,44 +51,46 @@ int main()
 
 	f1Last = e1 + a1[0];
 	f2Last = e2 + a2[0];
-	s1.append("1 ");
-	s2.append("2 ");
+	s1.append("e1(" + to_string(e1) + ") - a1[" + to_string(0) + "](" + to_string(a1[0]) + ") - ");
+	s2.append("e2(" + to_string(e2) + ") - a2[" + to_string(0) + "](" + to_string(a2[0]) + ") - ");
 
 	for (int i = 1; i < n; i++)
 	{
-		int tmpLast = f1Last; 
+		int tmpLast = f1Last;
 		string tmpS1 = "";
 		tmpS1.append(s1);
-		
+
 		if (f1Last <= f2Last + t2[i - 1])
 		{
 			f1Last = f1Last + a1[i];
-			s1.append("1 ");
+			s1.append("a1[" + to_string(i) + "](" + to_string(a1[i]) + ") - ");
 		}
 		else
 		{
 			f1Last = f2Last + t2[i - 1] + a1[i];
 			s1 = "";
 			s1.append(s2);
-			s1.append("1 ");
+			s1.append("t2[" + to_string(i - 1) + "](" + to_string(t2[i - 1]) + ") - " + "a1[" + to_string(i) + "](" + to_string(a1[i]) + ") - ");
 		}
 
 		if (f2Last <= tmpLast + t1[i - 1])
 		{
 			f2Last = f2Last + a2[i];
-			s2.append("2 ");
+			s2.append("a2[" + to_string(i) + "](" + to_string(a2[i]) + ") - ");
 		}
 		else
 		{
 			f2Last = tmpLast + t1[i - 1] + a2[i];
 			s2 = "";
 			s2.append(tmpS1);
-			s2.append("2 ");
+			s2.append("t1[" + to_string(i - 1) + "](" + to_string(t1[i - 1]) + ") - " + "a2[" + to_string(i) + "](" + to_string(a2[i]) + ") - ");
 		}
 	}
 
 	f1Last += x1;
 	f2Last += x2;
+	s1.append("x1(" + to_string(x1) + ")");
+	s2.append("x2(" + to_string(x2) + ")");
 
 	if (f1Last < f2Last)
 	{
