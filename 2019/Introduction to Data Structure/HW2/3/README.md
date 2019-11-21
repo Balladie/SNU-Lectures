@@ -35,6 +35,7 @@ push operator ch to stack }
 }
 pop all operators in stack and add the results to exp_postfix
 return exp_postfix
+
 ---
 
 The pseudo code above does not take parenthesis into account, so you must
