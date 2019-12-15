@@ -1,0 +1,13 @@
+# 5-instruction MIPS output analyzer
+
+5개의 instruction에 대한 MIPS assembly code를 분석하여 output과 hex-encoded memory-assignment verilog code를 출력해 주는 스크립트입니다. 
+
+구현된 instruction은 다음과 같습니다. 
+
+1. ADD
+2. ADI
+3. LHI
+4. JMP
+5. WWD (custom)
+
+!!!!! 반드시 형식을 지켜 주세요. 함께 제공되는 testcode.v와 testcode.txt를 참조해 주세요. 
