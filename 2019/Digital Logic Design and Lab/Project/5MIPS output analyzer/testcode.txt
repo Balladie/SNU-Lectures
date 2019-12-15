@@ -1,0 +1,28 @@
+LHI $0, 0x0
+LHI $1, 0x1
+LHI $2, 0x2
+LHI $3, 0x3
+WWD $0
+WWD $1
+WWD $2
+WWD $3
+ADI $2, $0, 0x4
+ADI $3, $1, 0xFC
+WWD $2
+WWD $3
+ADD $3, $1, $2
+ADD $2, $0, $1
+WWD $2
+WWD $3
+JMP 0x15
+WWD $0
+ADD $2, $0, $1
+ADD $2, $0, $1
+ADD $2, $0, $1
+LHI $0, 0x0
+ADI $0, $0, 0x0
+ADD $2, $3, $1
+WWD $0
+WWD $1
+WWD $2
+WWD $3
