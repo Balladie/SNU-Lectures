@@ -19,7 +19,7 @@
 (Windows) CMD를 열고
 (Linux) 터미널에서
 
-```python
+```bash
 python project_get_output.py
 ```
 
