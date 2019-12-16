@@ -148,9 +148,7 @@ while pc < len(lines) - 1:
             for i in range(8, 16):
                 imm += pow(2, i)
 
-        if reg[rs] < pow(2, 15) and imm < pow(2, 15) and reg[rs] + imm >= pow(2, 15):
-            reg[rt] = reg[rs] + imm - pow(2, 15)
-        elif reg[rs] + imm >= pow(2, 16):
+        if reg[rs] + imm >= pow(2, 16):
             reg[rt] = reg[rs] + imm - pow(2, 16)
         else:
             reg[rt] = reg[rs] + imm
