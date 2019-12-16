@@ -127,9 +127,7 @@ while pc < len(lines) - 1:
         rt = int(line[line.find(',', line.find(',')+1) + 3:line.find('\n')])
         rd = int(line[line.find('$') + 1:line.find(',')])
 
-        if reg[rs] < pow(2, 15) and reg[rt] < pow(2, 15) and reg[rs] + reg[rt] >= pow(2, 15):
-            reg[rd] = reg[rs] + reg[rt] - pow(2, 15)
-        elif reg[rs] + reg[rt] >= pow(2, 16):
+        if reg[rs] + reg[rt] >= pow(2, 16):
             reg[rd] = reg[rs] + reg[rt] - pow(2, 16)
         else:
             reg[rd] = reg[rs] + reg[rt]
